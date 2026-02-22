@@ -7,3 +7,6 @@ input {
 h1 {
     text-shadow: 3px 3px 3px slategray;
 }
+select {
+    background-color: rgba(170, 182, 146, 0.712);
+}
