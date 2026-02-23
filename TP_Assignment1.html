@@ -22,19 +22,29 @@ Description
             <label for = "midname"> M.Initial / </label>
                 <label for = "laname"> Last Name /</label>
                 <input type = "text" id = "fname" name = "fname" required>
-            <input type = "text" id = "midname" name = "midname">
+            <input type = "text" id = "midname" name = "midname" placeholder = "Optional">
         <input type = "text" id = "lname" name = "lname" required><br><br>
 
         <label for = "bdate">Date of Birth: </label>
-            <input type = "text" id = "bdate" placeholder="MM/DD/YYYY"><br><br>
+            <input type = "text" id = "bdate" placeholder="MM/DD/YYYY" required><br><br>
 
         <label for = "gender"> Sex:</label>
-            <input type = "radio" id = "m" name = "gender" value = "Male">
+            <input type = "radio" id = "m" name = "gender" value = "Male" required>
             <label for = "m">Male</label>
                 <input type = "radio" id = "f" name = "gender" value = "Female">
                 <label for = "f">Female</label>
                     <input type = "radio" id = "?" name = "gender" value = "Other">
                     <label for = "?">Other</label><br><br>
+        
+        <label for = "relations">Marital Status:</label>
+            <input type = "radio" id = "single" name = "relations" value = "single">
+            <label for = "single">Single</label>
+                <input type = "radio" id = "married" name = "relations" value = "married">
+                <label for = "married">Married</label>
+                    <input type = "radio" id = "widowed" name = "relations" value = "widowed">
+                    <label for = "widowed">Widowed</label>
+                        <input type = "radio" id = "separated" name = "relations" value = "separated">
+                        <label for = "separated">Separated</label><br><br>
 
         <label for ="ss">Social Security:</label>
             <input type = "text" id = "ss" placeholder ="123-45-6789"><br><br>
@@ -120,8 +130,14 @@ Description
                 <input type = "checkbox" id = "condition5" name = "condition5" value = "HIV/AIDS">                
                     <label for = "condition5">HIV/AIDS</label><br><br>
         
+        <label for = "mental">Have you had any history of Depression?</label><br>
+            <label for = "y">Yes</label>
+                <input type = "radio" id = "y" name = "metal" value = "yes">
+                    <label for = "n">No</label>
+                        <input type = "radio" id = "n" name = "metal" value = "no"><br><br>
+
         <label for = "range">Mental Health Assessment:</label><br>
-        1<input type = "range" min = "1" max= "10" value = "5">10<br><br>
+            1<input type = "range" min = "1" max= "10" value = "5">10<br><br>
           
         <input type = "reset" value = "Clear All">
         <input type = "submit" value = "Submit">

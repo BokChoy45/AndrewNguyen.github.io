@@ -10,3 +10,6 @@ h1 {
 select {
     background-color: rgba(170, 182, 146, 0.712);
 }
+body {
+    font-family: courier new;
+}
