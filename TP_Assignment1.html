@@ -8,15 +8,16 @@ Version
 Description
 -->
 <html>
+    <head>
+        <link rel = "stylesheet" href = "HW1CSS.css">
+        <link rel = "stylesheet" href = "med.png">
+    </head>
+    
     <body>
-        <image align = "center" src = "med.png" alt ="Patient Medical Form" width = "300" id = "picture"></image>
+        <image align = "center" src = "med.png" alt ="Patient Medical Form" width = "300" id = "picture"></image></image>
         <h1> Nguyen Healthcare New Patient Form</h1> 
         <p>Today's Date: <span id="date"></span></p>
-            <head>
-                <link rel = "stylesheet" href = "HW1CSS.css">
-                
-                <link rel = "stylesheet" href = "med.png">
-            </head>
+            
         <script>
             document.getElementById("date").innerHTML = new Date().toLocaleDateString();
         </script>  
