@@ -18,8 +18,8 @@ Description
             document.getElementById("date").innerHTML = new Date().toLocaleDateString();
         </script>  
     <form>
-        <label for = "fname">First Name / </label>
-            <label for = "midname"> M.Initial / </label>
+        <label for = "fname">First Name /</label>
+            <label for = "midname"> M.Initial /</label>
                 <label for = "laname"> Last Name /</label>
                 <input type = "text" id = "fname" name = "fname" required>
             <input type = "text" id = "midname" name = "midname" placeholder = "Optional">
@@ -98,6 +98,7 @@ Description
                             <option value="OK">Oklahoma</option>
                             <option value="OR">Oregon</option>
                             <option value="PA">Pennsylvania</option>
+                            <option value="PR">Puerto Rico</option>
                             <option value="RI">Rhode Island</option>
                             <option value="SC">South Carolina</option>
                             <option value="SD">South Dakota</option>
@@ -138,6 +139,13 @@ Description
 
         <label for = "range">Mental Health Assessment:</label><br>
             1<input type = "range" min = "1" max= "10" value = "5">10<br><br>
+        
+        <label for = "user">Username:</label>
+            <input type = "text" id = "user" name = "user"><br><br>
+                <label for = "pass">Password:</label>
+                    <input type = "text" id = "pass" name = "pass">
+                    <label for = "pass2">Confirm Password:</label>
+                <input type = "text" id = "pass2" name = "pass2"><br><br>
           
         <input type = "reset" value = "Clear All">
         <input type = "submit" value = "Submit">
