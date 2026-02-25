@@ -14,12 +14,12 @@ Description
     </head>
     
     <body>
-        <image align = "center" src = "med.png" alt ="Patient Medical Form" width = "300" id = "picture"></image></image>
+        <image src = "med.png" alt ="Patient Medical Form" width = "300" id = "picture"></image></image>
         <h1> Nguyen Healthcare New Patient Form</h1> 
         <p>Today's Date: <span id="date"></span></p>
             
         <script>
-            document.getElementById("date").innerHTML = new Date().toLocaleDateString();
+            document.getElementById("today").innerHTML = new Date().toLocaleDateString();
         </script>  
     <form action = "Hw1Thank_You.html">
         <label for = "fname">First Name /</label>
