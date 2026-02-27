@@ -21,8 +21,12 @@ Description
         <script>
             document.getElementById("date").innerHTML = new Date().toLocaleDateString();
         </script>
-        <script>
-            fetch("footer.html");
+        <script>        
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+        document.body.insertAdjacentHTML('beforeend', data);
+        });
         </script>
             
         <table>
