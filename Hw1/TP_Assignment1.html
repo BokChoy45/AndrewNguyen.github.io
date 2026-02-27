@@ -21,15 +21,9 @@ Description
         <script>
             document.getElementById("date").innerHTML = new Date().toLocaleDateString();
         </script>
-        <script>        
-        fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-        document.body.insertAdjacentHTML('beforeend', data);
-        });
-        </script>
             
         <table>
+    <div class="content">
     <form action = "Hw1Thank_You.html">
         <tr>
             <td><label for = "fullname">First Name / M.Initial / Last Name /</label></td>
@@ -185,8 +179,13 @@ Description
         <tr>
             <td><input type = "reset" value = "Clear All">
             <td><input type = "submit" value = "Submit"></td></tr>
-                   
+            </table> 
     </form>
-          
+        </div>
+            <footer>
+                <p>Nguyen Healthcare</p>
+                <p>Contact us</p>
+                <a href= "https://www.youtube.com/watch?v=Aq5WXmQQooo">NguHealthService@gmail.com</a></p>
+            </footer>   
     </body>
 </html>
