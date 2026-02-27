@@ -33,7 +33,7 @@ Description
 
         <tr>
             <td><label for = "bdate">Date of Birth: </label></td>
-            <td><input type = "text" id = "bdate" placeholder="MM/DD/YYYY" required></td></tr>
+            <td><input type = "date" id = "bdate" placeholder="MM/DD/YYYY" required></td></tr>
 
         <tr>
             <td><label for = "gender"> Sex:</label></td>
@@ -57,22 +57,22 @@ Description
 
         <tr>
             <td><label for ="phone">Phone #:</label></td>
-            <td><input type = "text" id = "phone" placeholder ="(281)242-6789"></td></tr>
+            <td><input type = "text" id = "phone" placeholder ="(281)242-6789" required></td></tr>
 
         <tr>
             <td><label for ="ss">Social Security:</label></td>
-            <td><input type = "password" id = "ss" placeholder ="123-45-6789"></td></tr>
+            <td><input type = "password" id = "ss" placeholder ="123-45-6789" minlength= "9" maxlength= "10" required></td></tr>
 
         <tr>
             <td><label for = "address">Address Line 1:</label></td>
-            <td><input type = "text" id = "address1"></td></tr>
+            <td><input type = "text" id = "address1" required></td></tr>
                 <tr>
                 <td><label for = "address">Address Line 2:</label></td>
                     <td><input type = "text" id = "address2"></tr></td>
 
         <tr>
             <td><label for = "city">City:</label>
-            <input type = "text" id = "city"></td>
+            <input type = "text" id = "city" required></td>
                 <td><label for = "state"> State:</label>
                     <select id = "state" required>
                         <option value="" selected="selected">Select a State</option>
@@ -131,7 +131,7 @@ Description
                             </select></td>
         
         <td><label for = "zip">Zip Code:</label>
-            <input type = "text" id= "zip"></td></tr>
+            <input type = "text" id= "zip" minlength = "5" maxlength= "10" required></td></tr>
         
         <tr>
             <td><label for = "checkbox">Past Medical History - Check all that apply:</label></td></tr>
@@ -165,16 +165,16 @@ Description
 
         <tr>
             <td><label for = "email">Email Address:</label></td>
-            <td><input type = "text" id = "email"></td></tr>
+            <td><input type = "text" id = "email" required></td></tr>
         <tr>
         <tr>
             <td><label for = "user">Username:</label></td>
-            <td><input type = "text" id = "user" name = "user" maxlength= "20"></td></tr>
+            <td><input type = "text" id = "user" name = "user" maxlength= "20" required></td></tr>
                 <tr>
                     <td><label for = "pass">Password:</label>
-                    <input type = "password" id = "pass" name = "pass"></td>
+                    <input type = "password" id = "pass" name = "pass" required></td>
                     <td><label for = "pass2">Confirm Password:</label>
-                <input type = "password" id = "pass2" name = "pass2"></td></tr>
+                <input type = "password" id = "pass2" name = "pass2" required></td></tr>
           
         <tr>
             <td><input type = "reset" value = "Clear All">
