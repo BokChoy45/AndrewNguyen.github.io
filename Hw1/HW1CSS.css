@@ -17,3 +17,6 @@ textarea {
     border-color: black;
     border-width: 2px;
 }
+form {
+    align-content: center;
+}
