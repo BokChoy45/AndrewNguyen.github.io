@@ -12,9 +12,3 @@ h1 {
 select {
     background-color: rgba(170, 182, 146, 0.712);
 }
-#wrap {
-  width: 20%;
-  margin: auto;
-  overflow: hidden;
-  padding: 15px;
-}
