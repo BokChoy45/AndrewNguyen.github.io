@@ -12,3 +12,8 @@ h1 {
 select {
     background-color: rgba(170, 182, 146, 0.712);
 }
+textarea {
+    background-color: rgba(170, 182, 146, 0.712);
+    border-color: black;
+    border-width: 2px;
+}
