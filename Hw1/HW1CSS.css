@@ -1,5 +1,7 @@
+
 body {
     background-color: #cab8a9;
+    font-family: courier new;
 }
 input {
     background-color: rgba(170, 182, 146, 0.712);
@@ -10,6 +12,9 @@ h1 {
 select {
     background-color: rgba(170, 182, 146, 0.712);
 }
-body {
-    font-family: courier new;
+#wrap {
+  width: 20%;
+  margin: auto;
+  overflow: hidden;
+  padding: 15px;
 }

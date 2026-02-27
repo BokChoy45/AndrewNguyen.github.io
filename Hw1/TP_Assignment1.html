@@ -22,6 +22,7 @@ Description
             document.getElementById("date").innerHTML = new Date().toLocaleDateString();
         </script>  
         <table>
+        <div id = "wrap">
     <form action = "Hw1Thank_You.html">
         <tr>
             <td><label for = "fullname">First Name / M.Initial / Last Name /</label></td>
@@ -53,20 +54,25 @@ Description
                         <input type = "radio" id = "separated" name = "relations" value = "separated">
                         <label for = "separated">Separated</label></td></tr>
 
-        <tr><td><label for ="phone">Phone #:</label>
-            <input type = "text" id = "phone" placeholder ="(281)242-6789"></tr></td>
+        <tr>
+            <td><label for ="phone">Phone #:</label></td>
+            <td><input type = "text" id = "phone" placeholder ="(281)242-6789"></td></tr>
 
-        <tr><td><label for ="ss">Social Security:</label>
-            <input type = "password" id = "ss" placeholder ="123-45-6789"></tr></td>
+        <tr>
+            <td><label for ="ss">Social Security:</label></td>
+            <td><input type = "password" id = "ss" placeholder ="123-45-6789"></td></tr>
 
-        <tr><td><label for = "address">Address Line 1:</label>
-            <input type = "text" id = "address1"><br><br>
-                <label for = "address">Address Line 2:</label>
-                    <input type = "text" id = "address2"></tr></td>
+        <tr>
+            <td><label for = "address">Address Line 1:</label></td>
+            <td><input type = "text" id = "address1"></td></tr>
+                <tr>
+                <td><label for = "address">Address Line 2:</label></td>
+                    <td><input type = "text" id = "address2"></tr></td>
 
-        <tr><td><label for = "city">City:</label>
-            <input type = "text" id = "city">
-                <label for = "state"> State:</label>
+        <tr>
+            <td><label for = "city">City:</label>
+            <input type = "text" id = "city"></td>
+                <td><label for = "state"> State:</label>
                     <select id = "state" required>
                         <option value="" selected="selected">Select a State</option>
                             <option value="AL">Alabama</option>
@@ -121,49 +127,60 @@ Description
                             <option value="WV">West Virginia</option>
                             <option value="WI">Wisconsin</option>
                             <option value="WY">Wyoming</option>
-                            </select>
+                            </select></td>
         
-        <label for = "zip">Zip Code:</label>
-            <input type = "text" id= "zip"></tr></td>
+        <td><label for = "zip">Zip Code:</label>
+            <input type = "text" id= "zip"></td></tr>
         
-        <tr><td><label for = "checkbox">Past Medical History - Check all that apply:</label><br>
-        <input type = "checkbox" id = "condition1" name = "condition1" value = "Covid19">
+        <tr>
+            <td><label for = "checkbox">Past Medical History - Check all that apply:</label></td></tr>
+        <tr>
+        <td><input type = "checkbox" id = "condition1" name = "condition1" value = "Covid19">
             <label for = "condition1">Covid19</label>
                 <input type = "checkbox" id = "condtion2" name = "condition2" value = "Diabetes">
-                    <lebel for = "condition2">Diabetes</label>
+                    <label for = "condition2">Diabetes</label>
                 <input type = "checkbox" id = "condition3" name = "condition3" value = "Smoking">
             <label for = "condition3">Smoking</label>
         <input type = "checkbox" id = "condition4" name = "condition4" value = "Drinking">
             <label for = "condition4">Drinking</label>
                 <input type = "checkbox" id = "condition5" name = "condition5" value = "HIV/AIDS">                
-                    <label for = "condition5">HIV/AIDS</label></tr></td>
+                    <label for = "condition5">HIV/AIDS</label></td></tr>
         
-        <tr><td><label for = "mental">Have you had any history of Depression?</label><br>
-            <label for = "y">Yes</label>
-                <input type = "radio" id = "y" name = "metal" value = "yes">
-                    <label for = "n">No</label>
-                        <input type = "radio" id = "n" name = "metal" value = "no"></tr></td>
-
-        <tr><td><label for = "range">Mental Health Assessment:</label></tr></td>
-            <tr><td>1<input type = "range" min = "1" max= "10" value = "5">10</tr></td>
+        <tr>
+            <td><label for = "mental">Have you had any history of Depression?</label></td>
+            <td><input type = "radio" id = "y" name = "metal" value = "yes">
+                <label for = "y">Yes</label>
+                    <input type = "radio" id = "n" name = "metal" value = "no">
+                        <label for = "n">No</label></td></tr>
+                        
+        <tr>
+            <td><label for = "range">Mental Health Assessment:</label></td>
+            <tr>
+                <td>1<input type = "range" min = "1" max= "10" value = "5">10</td></tr>
         
-        <tr><td><label for= "note">Additional Notes:</label></tr></td>
-            <tr><td><input type = "text" id = "note"></tr></td>
+        <tr>
+            <td><label for= "note">Additional Notes:</label>
+            <td><textarea name = "note" rows = "3" cols = "50" maxlength = "100"></textarea></td><tr>
 
-        <tr><td><label for = "email">Email Address:</label>
-            <input type = "text" id = "email"></tr></td>
-
-        <tr><td><label for = "user">Username:</label>
-            <input type = "text" id = "user" name = "user" maxlength= "20"></tr></td>
-                <tr><td><label for = "pass">Password:</label>
-                    <input type = "password" id = "pass" name = "pass">
-                    <label for = "pass2">Confirm Password:</label>
-                <input type = "password" id = "pass2" name = "pass2"></tr></td>
+        <tr>
+            <td><label for = "email">Email Address:</label></td>
+            <td><input type = "text" id = "email"></td></tr>
+        <tr>
+        <tr>
+            <td><label for = "user">Username:</label></td>
+            <td><input type = "text" id = "user" name = "user" maxlength= "20"></td></tr>
+                <tr>
+                    <td><label for = "pass">Password:</label>
+                    <input type = "password" id = "pass" name = "pass"></td>
+                    <td><label for = "pass2">Confirm Password:</label>
+                <input type = "password" id = "pass2" name = "pass2"></td></tr>
           
-        <tr><td><input type = "reset" value = "Clear All">
-        <input type = "submit" value = "Submit"></tr></td>
-                           
+        <tr>
+            <td><input type = "reset" value = "Clear All">
+            <td><input type = "submit" value = "Submit"></td></tr>
+                   
     </form>
+    </div>
           
     </body>
 </html>
