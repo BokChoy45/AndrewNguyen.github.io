@@ -1,0 +1,31 @@
+
+body {
+    background-color: #cab8a9;
+    font-family: courier new;
+}
+input {
+    background-color: rgba(170, 182, 146, 0.712);
+}
+h1 {
+    text-shadow: 3px 3px 3px slategray;
+}
+select {
+    background-color: rgba(170, 182, 146, 0.712);
+}
+textarea {
+    background-color: rgba(170, 182, 146, 0.712);
+    border-color: black;
+    border-width: 2px;
+}
+form {
+    align-content: center;
+}
+footer {
+    text-align: center;
+}
+.foot { 
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+    justify-content: flex-end;
+}
