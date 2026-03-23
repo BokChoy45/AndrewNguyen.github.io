@@ -22,10 +22,12 @@ Description - This medical form is a assignment for MIS3371. This form is meant 
         <script>
             document.getElementById("date").innerHTML = new Date().toLocaleDateString();
         </script>
+
+        <script src = "Hw2.js"></script>
             
         <table>
     <div class="content">
-    <form action = "Hw1Thank_You.html">
+    <form name = "medform" action = "Hw1Thank_You.html" onsubmit = "return validateForm()" method = "post">
         <tr>
             <td><label for = "fullname">First Name / M.Initial / Last Name /</label></td>
                 <td><input type = "text" id = "fname" name = "fname" maxlength = "30" required>
