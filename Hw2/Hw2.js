@@ -309,7 +309,7 @@ function reveiwInfo() {
                     break;
                 
                 default:
-                    if (value !==) {
+                    if (value !== "") {
                         formOutput += "<tr><td align='right'>" + name + "</td>";
                         formOutput += "<td class='outputdata'>" + value + "</td></tr>";
                     }
