@@ -93,7 +93,8 @@ Description - This medical form is a assignment for MIS3371. This form is meant 
 
         <tr>
             <td><label for = "city">City:</label>
-            <input type = "text" id = "city" required></td>
+            <input type = "text" id = "city" onblur = "validateCity()" required></td>
+            <span class = "error" id = "city-error"></span>
                 <td><label for = "state"> State:</label>
                     <select id = "state" required>
                         <option value="" selected="selected">Select a State</option>
