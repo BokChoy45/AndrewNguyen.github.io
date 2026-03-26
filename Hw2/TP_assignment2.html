@@ -31,7 +31,7 @@ Description - This medical form is a assignment for MIS3371. This form is meant 
         <tr>
             <td><label for = "fullname">First Name / M.Initial / Last Name /</label></td>
             <div class = "name-fields">
-                <td><input type = "text" id = "fname" name = "fname" maxlength = "30" required
+                <td><input type = "text" id = "fname" name = "fname" maxlength = "30"
                         Title = "ONLY Letters, Apostrophes, and Dashes for First Name" pattern = "[a-zA-Z'-]{1-30}"
                     onblur = "validateFname()" required>
                 <span class = 'error' id = "fname-error"></span>
@@ -41,7 +41,11 @@ Description - This medical form is a assignment for MIS3371. This form is meant 
                 title = "ONLY one Letter for Middle Initital" pattern = "[a-zA-Z]{1}" onblur = "validateMidname()">
             <span class = 'error' id = "midname-error"></span>
         </div>
-        <input type = "text" id = "lname" name = "lname" maxlength = "30" required></td></tr>
+        <div class = "name-fields">
+            <input type = "text" id = "lname" name = "lname" maxlength = "30"
+                title = "ONLY Letters, Apostropes, and Dashes for First Name" pattern = "[a-zA-Z'-]{1-30}"
+            onblur = "validateLname()" required></td></tr>
+        </div>
 
         <tr>
             <td><label for = "bdate">Date of Birth: </label></td>
