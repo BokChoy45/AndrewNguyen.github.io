@@ -75,11 +75,12 @@ Description - This medical form is a assignment for MIS3371. This form is meant 
 
         <tr>
             <td><label for ="phone">Phone #:</label></td>
-            <td><input type = "text" id = "phone" placeholder ="(281)242-6789" required></td></tr>
+            <td><input type = "text" id = "phone" placeholder = "(281)242-6789" required></td></tr>
 
         <tr>
             <td><label for ="ss">Social Security:</label></td>
-            <td><input type = "password" id = "ss" placeholder ="123-45-6789" minlength= "9" maxlength= "10" required></td></tr>
+            <td><input type = "password" id = "ss" placeholder = "123-45-6789" minlength= "9" maxlength= "10" onblur = "validateSSN()" required></td></tr>
+            <span class = "error" id = "ss-error"></span>
 
         <tr>
             <td><label for = "address">Address Line 1:</label></td>
