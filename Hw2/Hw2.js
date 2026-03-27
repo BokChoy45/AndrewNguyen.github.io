@@ -52,14 +52,14 @@ function validateLname() {
     let lname = document.getElementById("lname").value.trim();
         var LnamePattern = /^[a-zA-Z'-]+$/;
 
-            if (lname != "" ) {
+            if (lname = "" ) {
                 document.getElementById("lname-error").innerHTML = "Must enter a Last Name";
                 return false;
             }
             else
                 if (lname != "") {
                     if (!lname.match(LnamePattern)) {
-                        document.getElementById("lname-error").innerHTML = "Letters, Dashes, and Apostrophes ONLY"
+                        document.getElementById("lname-error").innerHTML = "Letters, Dashes, and Apostrophes ONLY":
                         return false;
                     }
                 else
@@ -267,8 +267,9 @@ function confirmPass() {
 }
 
 //Range Slider
-function rangeSlider(val) {
-    document.getElementById("mental").innerText = val;
+function rangeSlider(val)
+{
+    document.getElementById("mentalvalue").innerText = val;
 }
 
 //Review Button
