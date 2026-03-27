@@ -225,30 +225,31 @@ function validateUser() {
 }
 
 //Password Validation
-function validatePass() {
+function validatePass()
+{
     const pass = document.getElementById("pass").value;
     const user = document.getElementById("user").value;
     const errorMessage = [];
-    
-        if (!pass.match(/[a-z]/)) {
-            errorMessage.push("Please have at least one lowercase letter");
+
+    if(!pass.match(/[a-z]/)) {
+        errorMessage.push("Enter at least one lowercase letter");
+    }
+        if(!pass.match(/[A-Z]/)) {
+            errorMessage.push("Enter at least one uppercase letter");
         }
-            if (!pass.match(/[A-Z]/)) {
-                errorMessage.push("Please have at least one upercase letter");
+            if(!pass.match(/[0-9]/)) {
+                errorMessage.push("Enter at least one number");
             }
-                if (!pass.match(/[0-9]/)) {
-                    errorMessage.push("Please have at least one number");
-                }
-            if (pass.match(/[!@#$%&*-_\.+()]/)) {
-                errorMessage.push("Please have at least one special character");
-            }
-        if ((pass == user) || pass.includes(user)) {
-            errorMessage.push("Password cannot contain Username");
+        if(!pass.match(/[!@#$%&*_\.+()-]/)){
+                    errorMessage.push("Enter at least one special character");
         }
-        const errorContainer = document.querySleector(".pass-errorMessage");
-        errorContainer.innerHTML = errorMessage
-        .map(msg => '<span>${msg}<span><br>')
-        .join("");
+    if((pass == user) || pass.includes(user)) {
+        errorMessage.push("Password cannot contain username")
+    }
+    const errorContainer = document.querySelector(".pass-errorMessage");
+    errorContainer.innerHTML = errorMessage
+    .map(msg => `<span>${msg}</span><br>`)
+    .join("");
 }
 
 //Confirm Password Validation

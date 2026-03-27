@@ -47,9 +47,9 @@ Description - This medical form is a assignment for MIS3371. This form is meant 
             <input type = "text" id = "lname" name = "Last Name:" maxlength = "30"
                 title = "ONLY Letters, Apostropes, and Dashes for First Name" pattern = "[a-zA-Z'-]{1-30}"
                 onblur = "validateLname()" required>
-            <span class = "error" id = "lname-error"></span>
+            <span class = "error" id = "lname-error"></span></td></tr>
         </div>
-    </td></tr>
+    
         
 
         <tr></tr>
@@ -213,11 +213,11 @@ Description - This medical form is a assignment for MIS3371. This form is meant 
                     title = "Please Re-enter Password" onblur = "confirmPass()" oninput = "confirmPass()" 
                     onfocus = "confirmPass()" required>
                 <span class = "error" id = "pass2-error"></span></td></tr>
-          
+
         <tr>
-            <td><input type = "reset" value = "Clear All">
-            <td><input type="button" name = "review" value = "Review" onclick="reviewInfo()">
-            <td><input type = "submit" value = "Submit"></td></tr>
+            <td><td><input type = "reset" value = "Clear All">
+            <input type="button" name = "review" value = "Review" onclick="reviewInfo()">
+            <input type = "submit" value = "Submit"></td></td></tr>
             </table> 
         
         <div class = "pass-errorMessage">
@@ -229,8 +229,8 @@ Description - This medical form is a assignment for MIS3371. This form is meant 
             <span id = "msg6"></span><br>
             <span id = "msg7"></span><br>
             <span id = "pass2-error"></span><br>
-        </div>
-
+            </div>       
+            
         <center>
         <p id = "showInput"></p>
         </center>
