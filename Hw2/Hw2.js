@@ -172,7 +172,7 @@ function validateCity() {
 //Zip Code Validation
 function validateZip() {
     const zipInput = document.getElementById("zip");
-        let zip =zipInput.value.replace(/[^\d-]/g, "");
+        let zip = zipInput.value.replace(/[^\d-]/g, "");
 
             if (!zip) {
                 document.getElementById("zip-error").innerHTML = "Must enter a Zip Code";
@@ -229,11 +229,9 @@ function validatePass() {
     const pass = document.getElementById("pass").value;
     const user = document.getElementById("user").value;
     const errorMessage = [];
-    const errorContainer = document.querySleector(".pass-message");
-
-
+    
         if (!pass.match(/[a-z]/)) {
-            errorMessage.push("Please haveleast one lowercase letter");
+            errorMessage.push("Please have at least one lowercase letter");
         }
             if (!pass.match(/[A-Z]/)) {
                 errorMessage.push("Please have at least one upercase letter");
@@ -242,11 +240,12 @@ function validatePass() {
                     errorMessage.push("Please have at least one number");
                 }
             if (pass.match(/[!@#$%&*-_\.+()]/)) {
-                errorMessage.push("Please have at least one specitla character");
+                errorMessage.push("Please have at least one special character");
             }
         if ((pass == user) || pass.includes(user)) {
             errorMessage.push("Password cannot contain Username");
         }
+        const errorContainer = document.querySleector(".pass-message");
         errorContainer.innerHTML = errorMessage
         .map(msg => '<span>${msg}<span><br>')
         .join("");
@@ -265,6 +264,12 @@ function confirmPass() {
         document.getElementById("pass2-error").innerHTML = "Passwords Match";
         return true;
     }
+}
+
+//Range Slider
+function rangeSlider(val)
+{
+    document.getElementById("mental").innerText = val;
 }
 
 //Review Button
