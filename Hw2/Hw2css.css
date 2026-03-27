@@ -37,7 +37,13 @@ footer {
         font-size: 15px;
         margin-top: 3px;
     }
-
+.pass-errorMessage
+    {
+        font-family: "optima", Courier New;
+        font-size: 15px;
+        text-shadow: .5px .5px .5px dimgray;
+        color: red;
+    }
 #review
     {
         margin-top: 5px;

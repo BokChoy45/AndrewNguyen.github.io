@@ -240,12 +240,15 @@ function validatePass()
             if(!pass.match(/[0-9]/)) {
                 errorMessage.push("Enter at least one number");
             }
-        if(!pass.match(/[!@#$%&*_\.+()-]/)){
+                if(!pass.match(/[!@#$%&*_\.+()-]/)){
                     errorMessage.push("Enter at least one special character");
+                }
+            if(pass.length < 8) {
+                errorMessage.push("Password must be at least 8 characters")
+            }
+        if((pass == user) || pass.includes(user)) {
+            errorMessage.push("Password cannot contain username")
         }
-    if((pass == user) || pass.includes(user)) {
-        errorMessage.push("Password cannot contain username")
-    }
     const errorContainer = document.querySelector(".pass-errorMessage");
     errorContainer.innerHTML = errorMessage
     .map(msg => `<span>${msg}</span><br>`)
