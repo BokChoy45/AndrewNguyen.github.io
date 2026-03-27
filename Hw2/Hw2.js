@@ -245,7 +245,7 @@ function validatePass() {
         if ((pass == user) || pass.includes(user)) {
             errorMessage.push("Password cannot contain Username");
         }
-        const errorContainer = document.querySleector(".pass-message");
+        const errorContainer = document.querySleector(".Pass-errorMessage");
         errorContainer.innerHTML = errorMessage
         .map(msg => '<span>${msg}<span><br>')
         .join("");
