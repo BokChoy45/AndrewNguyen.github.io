@@ -267,8 +267,7 @@ function confirmPass() {
 }
 
 //Range Slider
-function rangeSlider(val)
-{
+function rangeSlider(val) {
     document.getElementById("mental").innerText = val;
 }
 
