@@ -32,10 +32,11 @@ function validateFname() {
 
 // Middle Initial Validation
 function validateMidname() {
-    let midname = document.getElementById("midname").value();
+    let midname = document.getElementById("midname").value;
         var MidnamePattern = /^[a-zA-Z]$/;
+        midname = midname.toUpperCase();
+        document.getElementById("midname").value = midname;
         
-        if (midname = "") {
             if (!midname.match(MidnamePattern)) {
                 document.getElementById("midname-error").innerHTML = "Enter a valid Middle Initial";
                 return false;
@@ -44,7 +45,6 @@ function validateMidname() {
                 document.getElementById("midname-error").innerHTML = "";
                 return true;
             }
-        }
 }
 
 //Last Name Validation
@@ -52,14 +52,14 @@ function validateLname() {
     let lname = document.getElementById("lname").value.trim();
         var LnamePattern = /^[a-zA-Z'-]+$/;
 
-            if (lname = "" ) {
+            if (lname == "" ) {
                 document.getElementById("lname-error").innerHTML = "Must enter a Last Name";
                 return false;
             }
             else
                 if (lname != "") {
                     if (!lname.match(LnamePattern)) {
-                        document.getElementById("lname-error").innerHTML = "Letters, Dashes, and Apostrophes ONLY":
+                        document.getElementById("lname-error").innerHTML = "Letters, Dashes, and Apostrophes ONLY";
                         return false;
                     }
                 else
@@ -201,7 +201,7 @@ function validateUser() {
             return false; 
         }
             if (!isNaN(user.charAt(0))) {
-                document.getElementById("error-error").innerHTML = "Username cannot begin with a number";
+                document.getElementById("user-error").innerHTML = "Username cannot begin with a number";
                 return false;
             }
                 if (!UserPattern.test(user)) {
@@ -245,7 +245,7 @@ function validatePass() {
         if ((pass == user) || pass.includes(user)) {
             errorMessage.push("Password cannot contain Username");
         }
-        const errorContainer = document.querySleector(".Pass-errorMessage");
+        const errorContainer = document.querySleector(".pass-errorMessage");
         errorContainer.innerHTML = errorMessage
         .map(msg => '<span>${msg}<span><br>')
         .join("");
@@ -272,54 +272,63 @@ function rangeSlider(val)
     document.getElementById("mentalvalue").innerText = val;
 }
 
-//Review Button
-function reveiwInfo() {
-    var formContent = document.getElementById("medform")
-    var forOutput = "<table class = 'output'><tr><th colspan = '2'> Review Information:</th></tr>";
+//Review Information
+function reviewInfo() {
+    var formcontent = document.getElementById("medform");
+    var formoutput = "<table class='output'><tr><th colspan='2'>Review Your Information:</th></tr>";
 
-        for (var i = 0; i < formContent.elements.length; i++) {
-            var el = formContent.elements.length[i];
-            var datatype = el.type;
-            var name = el.name;
-            var value = el.value;
+    for (var i = 0; i < formcontent.elements.length; i++) {
+        var el = formcontent.elements[i];
+        var datatype = el.type;
+        var name = el.name;
+        var value = el.value;
 
+        // skip elements with no name
         if (!name) continue;
-            
-            switch (datatype) {
-                case "checkbox":
-                    if (el.checked) {
-                        formOutput += "<tr><td align='right'>" + name + "</td>";
-                        formOutput += "<td class='outputdata'>&#x2713;</td></tr>";
-                    }
-                    break;
-                
-                case "range":
-                    if (value !== "0") {
-                        formOutput += "<tr><td align='right'>" + name + "</td>";
-                        formOutput += "<td class='outputdata'>" + value + "</td></tr>";
-                    }
-                    break;
 
-                case "radio":
+        switch (datatype) {
+            case "checkbox":
+                if (el.checked) {
+                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<td class='outputdata'>&#x2713;</td></tr>";
+                }
+                break;
+
+            case "radio":
                 if (el.checked) {
                     formoutput += "<tr><td align='right'>" + name + "</td>";
                     formoutput += "<td class='outputdata'>" + value + "</td></tr>";
                 }
                 break;
-                
-                case "button":
-                case "submit":
-                case "reset":
-                    
-                    break;
-                
-                default:
-                    if (value !== "") {
-                        formOutput += "<tr><td align='right'>" + name + "</td>";
-                        formOutput += "<td class='outputdata'>" + value + "</td></tr>";
-                    }
-            }
+
+            case "range":
+                // Only show the slider if the user moved it off the default (0)
+                if (value !== "0") {
+                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<td class='outputdata'>" + value + "</td></tr>";
+                }
+                break;
+
+            case "button":
+            case "submit":
+            case "reset":
+                // skip
+                break;
+
+            default:
+                if (value !== "") {
+                    formoutput += "<tr><td align='right'>" + name + "</td>";
+                    formoutput += "<td class='outputdata'>" + value + "</td></tr>";
+                }
         }
-        formoutput += "</table>";
+    }
+
+    formoutput += "</table>";
     document.getElementById("showInput").innerHTML = formoutput;
+}
+
+//Remove user input
+function removeReview()
+{
+    document.getElementById("showInput".innerHTML = "")
 }
